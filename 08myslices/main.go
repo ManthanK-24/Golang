@@ -12,7 +12,7 @@ func main() {
 	fmt.Printf("Type of fruitList is %T\n",fruitList)
 
 	fruitList = append(fruitList, "Mango","Banana")
-	//fmt.Println("fruitList",fruitList)
+	fmt.Println("fruitList",fruitList)
 
 	//fruitListCpy := append(fruitList[1:]) // last range is non-inclusive
 	//fmt.Println("fruitListCpy",fruitListCpy)
