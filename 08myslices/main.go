@@ -12,16 +12,16 @@ func main() {
 	fmt.Printf("Type of fruitList is %T\n",fruitList)
 
 	fruitList = append(fruitList, "Mango","Banana")
-	fmt.Println("fruitList",fruitList)
+	//fmt.Println("fruitList",fruitList)
 
-	fruitListCpy := append(fruitList[1:]) // last range is non-inclusive
-	fmt.Println("fruitListCpy",fruitListCpy)
+	//fruitListCpy := append(fruitList[1:]) // last range is non-inclusive
+	//fmt.Println("fruitListCpy",fruitListCpy)
 
-	fruitListCpy2 := append(fruitList[:3]) // last range is non-inclusive
-	fmt.Println("fruitListCpy2",fruitListCpy2)
+	//fruitListCpy2 := append(fruitList[:3]) // last range is non-inclusive
+	//fmt.Println("fruitListCpy2",fruitListCpy2)
 
-	fruitListCpy3 := append(fruitList[1:3]) // last range is non-inclusive
-	fmt.Println("fruitListCpy3",fruitListCpy3)
+	///fruitListCpy3 := append(fruitList[1:3]) // last range is non-inclusive
+	//fmt.Println("fruitListCpy3",fruitListCpy3)
 
 	highScores := make([]int, 4)
 	highScores[0] = 234
@@ -30,11 +30,17 @@ func main() {
 	highScores[3] = 867
     
 	highScores = append(highScores, 555, 666, 321)
-	fmt.Println(highScores)
-    fmt.Println(sort.IntsAreSorted(highScores))
+	//fmt.Println(highScores)
+   // fmt.Println(sort.IntsAreSorted(highScores))
 	sort.Ints(highScores)
-	fmt.Println(highScores)
-    fmt.Println(sort.IntsAreSorted(highScores))
+	//fmt.Println(highScores)
+    //fmt.Println(sort.IntsAreSorted(highScores))
 
-	
+	// how to remove a value from slices based on index
+
+	var courses = []string{"reactjs","javascript","swift","python","ruby"}
+    fmt.Println(courses)
+	var idx int = 2
+	courses = append(courses[:idx], courses[idx+1:]...)
+	fmt.Println(courses) 
 }
